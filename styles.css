@@ -1,31 +1,94 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #fff5f7;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
     color: #333;
 }
 
-header {
-    background: linear-gradient(135deg, #ff6b8b, #ff8e53);
-    color: white;
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 40px 20px;
+    color: #fff;
 }
 
-.logo {
-    width: 150px;
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
-.btn {
-    background-color: #25D366; /* Verde WhatsApp */
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecido */
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.logo-animado {
+    width: 200px;
+    animation: logoFadeIn 2s ease forwards;
+}
+
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+
+.btn-cta {
+    background-color: #00a878;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #008f66;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .logo-animado {
+        width: 150px;
+    }
 }
