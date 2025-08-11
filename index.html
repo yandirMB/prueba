@@ -1,90 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Alisado, Mechas, Color y Rizos en Lima | MB Escuela</title>
-  <meta name="description" content="Aprende peluquería desde cero en Lima con MB Escuela: cursos prácticos de alisado, mechas, colorimetría y rizos. Reserva con S/ 50 y recibe diploma." />
-  <meta name="keywords" content="curso de alisado en Lima, curso de mechas en Lima, curso de colorimetría, curso de rizos, peluquería para principiantes, escuela de belleza Lima, MB Escuela, clases de peluquería, mamás emprendedoras" />
-  <meta name="author" content="MB Escuela" />
-  <meta property="og:title" content="Cursos de Peluquería en Lima | MB Escuela" />
-  <meta property="og:description" content="Transforma tu pasión en ingresos. Aprende alisado, color, mechas y rizos en San Isidro con cursos prácticos y diploma." />
-  <meta property="og:image" content="https://yandirmb.github.io/mbescuela/images/logo.png" />
-  <meta property="og:url" content="https://yandirmb.github.io/mbescuela/" />
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  <style>
-    .video-reel iframe {
-      width: 100%;
-      max-width: 500px;
-      height: 500px;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-    @media (max-width: 600px) {
-      .video-reel iframe {
-        height: 300px;
-      }
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png') no-repeat center center;
-      background-size: cover;
-      border-radius: 50%;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-    .whatsapp-float:hover::after {
-      content: "Escríbenos";
-      position: absolute;
-      right: 70px;
-      background: #25D366;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      white-space: nowrap;
-      font-size: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Escuela</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS (solo una vez) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-  <nav class="nav">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-  <header id="inicio">
-    <img src="images/logo.png" alt="MB Escuela - Cursos de Belleza en Lima" class="logo" />
-    <h1>Domina las Técnicas Más Demandadas 💇‍♀️</h1>
-    <p>Certificaciones internacionales • Aprendizaje 100% práctico</p>
-  </header>
-  <section id="sobre-nosotros" class="seccion">
-    <h2>🙋‍♀️ Sobre MB Escuela</h2>
-    <p>Somos una escuela en San Isidro especializada en formación práctica para estilistas y mamás emprendedoras.</p>
-    <p>Te ayudamos a generar ingresos enseñándote lo más pedido: alisado, mechas, color, rizos y más.</p>
-    <div class="video-reel">
-      <iframe src="https://www.instagram.com/reel/DL0r5T6xwpS/embed" frameborder="0" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </section>
+
+    <!-- HEADER con video y logo -->
+    <header id="inicio">
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="videos/fondo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <img src="images/logo.png" alt="MB Escuela" class="logo-animado">
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Aquí van tus secciones -->
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51969121250?text=Hola%20MB%20Escuela" class="whatsapp-float" target="_blank"></a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>
