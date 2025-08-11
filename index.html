@@ -3,44 +3,587 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="MB Escuela - Cursos de belleza y estilismo para mamás emprendedoras en San Isidro, Lima.">
-    <meta name="keywords" content="alisado profesional, cursos de belleza, estilismo, MB Escuela, San Isidro, Lima, Perú">
+    <title>Curso de Alisado, Mechas, Color y Rizos con Certificado Incluido | MB Escuela</title>
+    <meta name="description" content="Cursos de peluquería en Lima: aprende alisado, mechas, colorimetría y rizos con clases prácticas, diploma incluido y reserva con S/ 50. ¡Inscríbete hoy en MB Escuela!" />
+    <meta name="keywords" content="curso de alisado en Lima, curso de mechas en Lima, curso de colorimetría, curso de rizos, peluquería para principiantes, escuela de belleza Lima, MB Escuela, clases de peluquería, mamás emprendedoras" />
     <meta name="author" content="MB Escuela" />
-    <link rel="icon" href="img/favicon.ico" type="images/favicon.ico" />
-    <title>MB Escuela - Cursos de Belleza</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <meta property="og:title" content="Cursos de Peluquería en Lima | MB Escuela" />
+    <meta property="og:description" content="Transforma tu pasión en ingresos. Aprende alisado, color, mechas y rizos en San Isidro con cursos prácticos y diploma." />
+    <meta property="og:image" content="https://yandirmb.github.io/mbescuela/images/logo.png" />
+    <meta property="og:url" content="https://yandirmb.github.io/mbescuela/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yandirmb.github.io/mbescuela/" />
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
 
-    <!-- HERO con video de fondo -->
-    <section class="hero">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" as="script">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW9K5FQ7R8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MW9K5FQ7R8');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "name": "MB Escuela",
+        "url": "https://yandirmb.github.io/mbescuela/",
+        "logo": "https://yandirmb.github.io/mbescuela/images/logo.png",
+        "image": "https://yandirmb.github.io/mbescuela/images/logo.png",
+        "sameAs": [
+            "https://www.instagram.com/mbescuela",
+            "https://www.tiktok.com/@mbestudio8",
+            "https://www.facebook.com/share/19k7sx7vxw/"
+        ],
+        "description": "Escuela de belleza en Lima que ofrece cursos de peluquería como alisado, color, rizos y mechas con clases prácticas y certificado incluido.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Dos de Mayo",
+            "addressLocality": "San Isidro",
+            "addressRegion": "Lima",
+            "addressCountry": "Perú"
+        },
+        "telephone": "+51969121250",
+        "openingHours": "Mo-Fr 09:00-18:00"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #004d40;
+            --secondary: #D4AF37;
+            --whatsapp: #25D366;
+            --text: #333;
+            --light-bg: #fff5f7;
+            --white: #ffffff;
+        }
+
+        /* Estilos generales y para el logo */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--light-bg);
+        }
+
+        .seccion {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        /* Hero Section y Logo (Solución) */
+        .hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 100px 20px;
+            min-height: 80vh;
+            background-color: rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .hero-logo {
+            max-width: 150px; /* Tamaño máximo del logo */
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* Navegación */
+        .nav {
+            background-color: var(--white);
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+        /* Cursos */
+        .cursos {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .curso {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            background-color: var(--white);
+            padding-bottom: 20px;
+        }
+
+        .curso-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .curso h3 {
+            color: var(--primary);
+            margin: 15px 0 10px;
+        }
+
+        .curso p {
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Resultados */
+        .before-after {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .before-after img {
+            max-width: 45%;
+            border-radius: 8px;
+        }
+
+        /* Bono y Pago */
+        .bono ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .bono li {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .qr-img {
+            border: 5px solid var(--secondary);
+            border-radius: 10px;
+        }
+
+        /* Testimonios (Swiper) */
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            padding: 15px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Popup */
+        .popup-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: #000;
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 9999;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 300px;
+            animation: fadeInUp 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/51969121250" class="whatsapp-float" aria-label="Contactar por WhatsApp"></a>
+
+    <header id="inicio" class="hero">
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="videos/video-fondo.mp4" type="video/mp4">
-            Tu navegador no soporta videos en HTML5.
+            <source src="videos/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="images/logo.png" alt="MB Escuela" class="logo-animado" />
-            <h1>Aprende. Emprende. Transforma.</h1>
-            <p>Formación profesional en belleza y estilismo para mujeres emprendedoras.</p>
-            <a href="https://wa.me/51969121250" class="btn-cta" target="_blank">Reserva tu cupo</a>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="MB Escuela" class="hero-logo" />
+            <p class="logo-text">Escuela de Peluquería Profesional</p>
+        </div>
+        <h1>Conviértete en Peluquera Profesional en 8 Semanas</h1>
+        <p>Certificación internacional • Práctica con modelos reales</p>
+        <a href="#cursos" class="btn" style="background:var(--secondary);">Ver Cursos Disponibles</a>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#cursos" class="nav-link">Cursos</a></li>
+            <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre-nosotros" class="seccion">
+        <h2>👋‍♀️ Sobre MB Escuela</h2>
+        <p><strong>MB Escuela</strong> es una academia de peluquería en San Isidro, Lima, especializada en cursos prácticos y personalizados para mujeres que quieren emprender en el rubro de la belleza.</p>
+        <p>Capacitamos desde cero en las técnicas más demandadas: <strong>alisado, colorimetría, balayage, mechas y definición de rizos</strong>. Nuestros grupos reducidos garantizan atención personalizada, práctica real con modelos y <strong>diploma incluido</strong>.</p>
+        <p>Si quieres generar ingresos desde el primer mes, ¡te ayudamos a lograrlo con metodología comprobada y asesoría constante!</p>
+        
+        <div class="video-reel">
+            <iframe src="https://www.instagram.com/reel/DL0r5T6xwpS/embed" frameborder="0" allowfullscreen loading="lazy" title="Video demostrativo de MB Escuela"></iframe>
         </div>
     </section>
 
-    <!-- Aquí sigue el resto de tu página tal cual -->
-    <section class="cursos">
-        <!-- contenido de tus cursos -->
+    <section id="cursos" class="seccion cursos">
+        <h2>💇‍♀️ Nuestros Cursos de Peluquería</h2>
+        <div class="curso">
+            <img src="images/curso-alisado-lima.webp" alt="Curso de alisado profesional en Lima con certificado MB Escuela" class="curso-img" loading="lazy" width="500" height="300" />
+            <h3>🔥 Alisado Pro & Keratina</h3>
+            <p>Aprende técnicas con productos Kerasilk. Desde la primera clase trabajas con modelos reales. Certificación incluida.</p>
+            <a href="https://wa.me/51969121250?text=¡Quiero%20el%20curso%20de%20Alisado!" class="btn">📞 Inscribirme</a>
+        </div>
+        <div class="curso">
+            <img src="images/curso-colorimetria-lima.webp" alt="Curso de colorimetría profesional desde cero en Lima con MB Escuela" class="curso-img" loading="lazy" width="500" height="300" />
+            <h3>🎨 Colorimetría Profesional</h3>
+            <p>Domina mezcla de tintes, diagnóstico capilar, correcciones de color y tonos personalizados. Con práctica real y diploma.</p>
+            <a href="https://wa.me/51969121250?text=¡Quiero%20el%20curso%20de%20Colorimetría!" class="btn">📞 Inscribirme</a>
+        </div>
+        <div class="curso">
+            <img src="images/curso-mechas-balayage.webp" alt="Curso de mechas balayage, babylights y rubios 3D en Lima con práctica" class="curso-img" loading="lazy" width="500" height="300" />
+            <h3>⚡ Mechas & Balayage</h3>
+            <p>Aprende técnicas modernas como balayage, babylights y rubios 3D. Resultados visibles desde el primer día.</p>
+            <a href="https://wa.me/51969121250?text=¡Quiero%20el%20curso%20de%20Mechas!" class="btn">📞 Inscribirme</a>
+        </div>
+        <div class="curso">
+            <img src="images/curso-rizos-definicion.webp" alt="Curso práctico para definir rizos en Lima con certificado MB Escuela" class="curso-img" loading="lazy" width="500" height="300" />
+            <h3>💫 Rizos Definidos</h3>
+            <p>Aprende técnicas para definir rizos, productos ideales y métodos de cuidado capilar. Incluye diploma MB Escuela.</p>
+            <a href="https://wa.me/51969121250?text=¡Quiero%20el%20curso%20de%20Rizos!" class="btn">📞 Inscribirme</a>
+        </div>
     </section>
 
-    <section class="testimonios">
-        <!-- testimonios -->
+    <section class="seccion">
+        <h2>✨ Resultados Reales de Nuestras Alumnas</h2>
+        <div class="before-after">
+            <img src="img/antes-1.jpg" alt="Resultado antes del curso" loading="lazy" width="400" height="400" style="max-width: 45%;">
+            <img src="img/despues-1.jpg" alt="Resultado después del curso" loading="lazy" width="400" height="400" style="max-width: 45%;">
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 MB Escuela - Todos los derechos reservados</p>
+    <section id="bono" class="seccion bono">
+        <h2>🎁 Bono Especial por Tiempo Limitado</h2>
+        <p>Por la compra de cualquier curso, recibirás <strong>GRATIS</strong> este bono:</p>
+        <ul>
+            <li>📲 Cómo grabar tus trabajos con celular</li>
+            <li>📸 Qué fotos subir para atraer clientas</li>
+            <li>📈 Cómo mostrar resultados y vender más</li>
+        </ul>
+    </section>
+
+    <section id="pago" class="seccion">
+        <h2>💳 Reserva tu vacante por Yape</h2>
+        <p>Escanea este código QR y separa tu cupo con solo S/ 50. Luego, envíanos tu comprobante por WhatsApp 📲.</p>
+        <img src="images/yape-qr.jpeg" alt="Código QR para Yape MB Escuela" class="qr-img" loading="lazy" width="220" height="220" />
+    </section>
+
+    <section id="testimonios" class="seccion">
+        <h2>🌟 Opiniones de nuestras alumnas</h2>
+        
+        <div class="swiper testimonial-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Profesora muy paciente. Aprendí desde cero y ahora tengo clientas 🙏"</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-1.jpg" alt="María - Alumna de MB Escuela" loading="lazy" width="50" height="50">
+                                <span>María, Lima</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Gracias a MB Escuela, abrí mi propio salón 💇‍♀️✨"</p>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-2.jpg" alt="Lucía - Alumna de MB Escuela" loading="lazy" width="50" height="50">
+                                <span>Lucía, San Isidro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="swiper-pagination" aria-hidden="true"></div>
+            <div class="swiper-button-next" aria-label="Siguiente testimonio"></div>
+            <div class="swiper-button-prev" aria-label="Testimonio anterior"></div>
+        </div>
+        
+        <p>📝 ¿Tomaste uno de nuestros cursos y quieres dejar tu opinión?</p>
+        <a href="https://wa.me/51969121250?text=Quiero%20dejar%20mi%20testimonio%20sobre%20MB%20Escuela" class="btn">💬 Enviar testimonio por WhatsApp</a>
+    </section>
+
+    <section id="faq" class="seccion">
+        <h2>❓ Preguntas Frecuentes</h2>
+        
+        <div class="faq-item">
+            <h3>¿Necesito experiencia previa?</h3>
+            <p>No necesitas experiencia. Nuestros cursos están diseñados para comenzar desde cero.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿Qué necesito para asistir?</h3>
+            <p>Solo tus ganas de aprender. Si no tienes herramientas, puedes alquilarlas con nosotros.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿Se entrega diploma?</h3>
+            <p>Sí, todos nuestros cursos incluyen certificado al finalizar.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿En cuánto tiempo puedo empezar a trabajar?</h3>
+            <p>Desde el primer mes puedes ofrecer servicios reales, gracias a nuestra formación práctica.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿Dónde se dictan las clases?</h3>
+            <p>En San Isidro, Lima. Una zona céntrica y segura, fácil de llegar desde cualquier distrito.</p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>© 2025 MB Escuela | WhatsApp: +51 969 121 250</p>
+        <p>
+            Síguenos:
+            <a href="https://www.instagram.com/mbescuela" target="_blank" rel="noopener noreferrer">Instagram</a> •
+            <a href="https://www.tiktok.com/@mbestudio8" target="_blank" rel="noopener noreferrer">TikTok</a> •
+            <a href="https://www.facebook.com/share/19k7sx7vxw/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.testimonial-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            a11y: {
+                prevSlideMessage: 'Testimonio anterior',
+                nextSlideMessage: 'Siguiente testimonio',
+            }
+        });
+
+        // Popup with session storage control
+        document.addEventListener('DOMContentLoaded', () => {
+            const popupTrigger = () => {
+                if (sessionStorage.getItem('popupShown')) return;
+                
+                const popup = document.createElement('div');
+                popup.className = 'popup-container';
+                popup.innerHTML = `
+                    <button class="popup-close" aria-label="Cerrar popup">×</button>
+                    <p style="margin:0 0 5px 0; font-weight:bold;">🔥 3 CUPOS DISPONIBLES</p>
+                    <p style="margin:5px 0 10px;">¡50% de descuento si reservas hoy!</p>
+                    <a href="https://wa.me/51969121250" style="display:inline-block; background:var(--whatsapp); color:white; padding:8px 15px; border-radius:4px; text-decoration:none;">Quiero mi descuento</a>
+                `;
+                
+                popup.querySelector('.popup-close').addEventListener('click', () => {
+                    popup.remove();
+                });
+                
+                document.body.appendChild(popup);
+                sessionStorage.setItem('popupShown', 'true');
+            };
+
+            // Show popup after scrolling 25% of page
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > (document.body.scrollHeight * 0.25)) {
+                    popupTrigger();
+                    window.removeEventListener('scroll', this);
+                }
+            }, {once: true});
+            
+            // Active nav link highlighting
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section, header[id]');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
